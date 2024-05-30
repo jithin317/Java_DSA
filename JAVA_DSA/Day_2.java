@@ -4,9 +4,9 @@ package cat_DSA.JAVA_DSA;
 import java.util.*;
 public class Day_2 {
 	public static void main(String[] args) {
-		int arr[] = {1,2,5,6,7,8,9};
-		int index = returnIndex(arr,0,11);
-		System.out.println(index);
+		int arr[] = {5,1,4,2,8};
+		int[] sortedArr = bubbleSortR(arr,0,0);
+		System.out.println(Arrays.toString(sortedArr));
 	}
 	
 	public static int[] bubbleSort(int[] arr,int n){
@@ -67,5 +67,22 @@ public class Day_2 {
 			return s;
 		}
 		return returnIndex(arr,s + 1,ele);
+	}
+	
+	public static int[] bubbleSortR(int[] arr, int s, int i) {
+		int temp;
+		if(i == arr.length - 1) {
+			return arr;
+		}
+		if(s == arr.length - 1 - i) {
+			i++;
+			s = 0;
+		}
+		if(arr[s] > arr[s+1]) {
+			temp = arr[s];
+			arr[s] = arr[s+1];
+			arr[s+1] = temp;
+		}
+		return bubbleSortR(arr,s+1,i);
 	}
 }
