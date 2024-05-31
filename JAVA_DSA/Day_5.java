@@ -4,8 +4,9 @@ import java.util.*;
 
 public class Day_5 {
 	public static void main(String[] args) {
-		int[] arr = fillArray();
-		System.out.println(Arrays.toString(arr));
+		int[] arr = {3,1,2,2,2};
+		int index = findEquilibriumIndex(arr);
+		System.out.println(index == -1 ? "There is no Equilibrium index" : "The Equilibrium position is at index : "+index);
 	}
 	
 	public static int[] getIntersection(int[] a,int[] b) {
@@ -57,5 +58,21 @@ public class Day_5 {
 			}
 		}
 		return arr;
+	}
+	
+	public static int findEquilibriumIndex(int[] arr) {
+		int total = 0, sum = 0, lSum, rSum;
+		for(int i : arr) {
+			total += i;
+		}
+		for(int i = 0; i < arr.length; i++) {
+			rSum = total - (sum + arr[i]);
+			lSum = sum;
+			if(rSum == lSum) {
+				return i;
+			}
+			sum += arr[i];
+		}
+		return -1;
 	}
 }
