@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class Day_4 {
 	public static void main(String[] args) {
-		int arr[] = {1,2,3,4,5,6};
-		reverseArray(arr,0,arr.length-1);
-		System.out.println(Arrays.toString(arr));
+		int arr[] = {2,4,4,2,6,7,7};
+		int uniqueEl = findUniqueElement(arr);
+		System.out.println(uniqueEl);
 	}
 	
 	public static void insertionSort(int[] arr,int n) {
@@ -30,6 +30,12 @@ public class Day_4 {
 		}
 	}
 	
-	
+	public static int findUniqueElement(int[] arr) {
+		int s = 0;
+		for(int i : arr) {
+			s ^= i;
+		}
+		return s;
+	}
 
 }
