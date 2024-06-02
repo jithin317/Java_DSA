@@ -1,7 +1,5 @@
 package cat_DSA.JAVA_DSA;
 
-import java.util.Arrays;
-
 public class Day_4 {
 	public static void main(String[] args) {
 		int arr[] = {2,4,4,2,6,7,7};

@@ -57,6 +57,7 @@ public class Day_5 {
 				x++;
 			}
 		}
+		sc.close();
 		return arr;
 	}
 	
