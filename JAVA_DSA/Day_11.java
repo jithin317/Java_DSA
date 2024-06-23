@@ -11,9 +11,9 @@ public class Day_11 {
 //		System.out.print("Elements in the list after adding: ");
 //		Node<Integer> head2 = addNode(head,50,200);
 //		Day_10.printLLR(head2);
-		System.out.print("Elements in the list after deleting: ");
-		Node<Integer> head2 = deleteNode(head,5);
-		Day_10.printLLR(head2);		
+//		System.out.print("Elements in the list after deleting: ");
+//		Node<Integer> head2 = deleteNode(head,5);
+//		Day_10.printLLR(head2);		
 	}
 	
 	static Node<Integer> getNode(Node<Integer> head,int index){
@@ -82,4 +82,5 @@ public class Day_11 {
 		temp.next = temp.next.next;
 		return head;
 	}
+	
 }
